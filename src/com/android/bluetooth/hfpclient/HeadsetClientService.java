@@ -527,7 +527,7 @@ public class HeadsetClientService extends ProfileService {
         return devices;
     }
 
-    private synchronized int getConnectionState(BluetoothDevice device) {
+    public synchronized int getConnectionState(BluetoothDevice device) {
         enforceCallingOrSelfPermission(BLUETOOTH_PERM, "Need BLUETOOTH permission");
         HeadsetClientStateMachine sm = mStateMachineMap.get(device);
         if (sm != null) {

@@ -17,9 +17,11 @@
 package com.android.bluetooth.btservice;
 
 import com.android.bluetooth.a2dp.A2dpService;
+import com.android.bluetooth.a2dpsink.A2dpSinkService;
 import com.android.bluetooth.avrcp.AvrcpTargetService;
 import com.android.bluetooth.hearingaid.HearingAidService;
 import com.android.bluetooth.hfp.HeadsetService;
+import com.android.bluetooth.hfpclient.HeadsetClientService;
 import com.android.bluetooth.hid.HidDeviceService;
 import com.android.bluetooth.hid.HidHostService;
 import com.android.bluetooth.pan.PanService;
@@ -30,8 +32,16 @@ public class ServiceFactory {
         return A2dpService.getA2dpService();
     }
 
+    public A2dpSinkService getA2dpSinkService() {
+        return A2dpSinkService.getA2dpSinkService();
+    }
+
     public HeadsetService getHeadsetService() {
         return HeadsetService.getHeadsetService();
+    }
+
+    public HeadsetClientService getHeadsetClientService() {
+        return HeadsetClientService.getHeadsetClientService();
     }
 
     public HidHostService getHidHostService() {
